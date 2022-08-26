@@ -16,7 +16,7 @@ https://github.com/sturmenta/docker-ts-template
 
 ## build and push to docker-hub
 
-    yarn push-prod
+    yarn go-prod
 
 <!-- // enter to shell inside docker image -->
 <!--  -->

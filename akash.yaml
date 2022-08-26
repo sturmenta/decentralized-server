@@ -1,0 +1,34 @@
+---
+version: "2.0"
+
+services:
+  docker-ts-template:
+    image: sturmenta/docker-ts-template:0.0.3
+    env:
+      - MY_SUPER_PASSWORD=<copy-from-.env>
+    expose:
+      - port: 4000
+        as: 80
+        to:
+          - global: true
+profiles:
+  compute:
+    docker-ts-template:
+      resources:
+        cpu:
+          units: 0.25
+        memory:
+          size: 128Mi
+        storage:
+          size: 128Mi
+  placement:
+    akash:
+      pricing:
+        docker-ts-template:
+          denom: uakt
+          amount: 10000
+deployment:
+  docker-ts-template:
+    akash:
+      profile: docker-ts-template
+      count: 1

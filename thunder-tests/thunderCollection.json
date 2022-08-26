@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "_id": "cc5ba1cb-0c95-4bd8-9c1d-57a271b74bed",
+    "colName": "localhost",
+    "created": "2022-08-26T21:24:24.799Z",
+    "sortNum": 10000,
+    "folders": []
+  },
+  {
+    "_id": "69c83f15-3470-4f1e-845b-af12b32bd095",
+    "colName": "akash-node",
+    "created": "2022-08-26T21:24:57.515Z",
+    "sortNum": 20000,
+    "folders": []
+  }
+]

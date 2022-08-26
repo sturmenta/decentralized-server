@@ -15,7 +15,7 @@
     "docker:run-local-prod": "docker run --env-file ../.env -dp 4000:4000 sturmenta/docker-ts-template:latest",
     "─────────────────────────────": "─────────────────────────────────",
     "start": "docker compose -f docker-compose.dev.yml up --build",
-    "push-prod": "echo Image tag?; read _tag; docker build --target production --platform linux/amd64 -t sturmenta/docker-ts-template:$_tag .; docker push sturmenta/docker-ts-template:$_tag"
+    "go-prod": "echo Image tag?; read _tag; docker build --target production --platform linux/amd64 -t sturmenta/docker-ts-template:$_tag .; docker push sturmenta/docker-ts-template:$_tag"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
