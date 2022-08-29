@@ -1,3 +1,9 @@
+# ↓ use CloudFlare to enable custom domain names and HTTPS/SSL on your Akash deployment ↓
+# https://teeyeeyang.medium.com/how-to-use-a-custom-domain-with-your-akash-deployment-5916585734a2
+# https://docs.akash.network/deploy/tls-termination-of-akash-deployments/akash-with-tls-example
+#
+# TODO: replace url.com with your actual url
+
 ---
 version: "2.0"
 
@@ -5,10 +11,13 @@ services:
   docker-ts-template:
     image: sturmenta/docker-ts-template:0.0.3
     env:
+      - 'url=https://url.com'
       - MY_SUPER_PASSWORD=<copy-from-.env>
     expose:
       - port: 4000
         as: 80
+        accept:
+          - "url.com"
         to:
           - global: true
 profiles:
